@@ -14,12 +14,17 @@ public class MybraryDatabase extends SQLiteOpenHelper {
 	}
 	
 	@Override
-	public void onCreate(SQLiteDatabase db){
+	public void onCreate(SQLiteDatabase db) {
 		BookTable.onCreate(db);
 	}
 	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		BookTable.onUpgrade(db, oldVersion, newVersion);
+	}
+	
+	//Seed some starting data
+	private void seedData(SQLiteDatabase db) {
+		//db.execSQL("insert into books (title, author, isbn) values ('This book', 'That Guy', '4560');");
 	}
 }
