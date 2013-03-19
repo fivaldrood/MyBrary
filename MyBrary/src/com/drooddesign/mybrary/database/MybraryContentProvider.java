@@ -2,11 +2,25 @@ package com.drooddesign.mybrary.database;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 
 public class MybraryContentProvider extends ContentProvider {
-
+	
+	private MybraryDatabase mDB;
+	
+	public static final int mBooks = 1;
+	public static final int mBooksId = 2;
+	
+	
+	private static final UriMatcher mURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+	static {
+		mURIMatcher.addURI(MybraryProvider.mAUTHORITY, TODOTODO, mBooks);
+		mURIMatcher.addURI(MybraryProvider.mAUTHORITY, TODOTODO, mBooksId);
+		
+	}
+	
 	@Override
 	public int delete(Uri uri, String selection, String[] selectionArgs) {
 		// TODO Auto-generated method stub
