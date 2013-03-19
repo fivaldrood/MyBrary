@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider
+            android:authorities="com.drooddesign.mybrary.database.mybrarycontentprovider"
+            android:name="com.drooddesign.mybrary.database.MybraryContentProvider"
+            android:exported="false">
+         </provider>
     </application>
 
 </manifest>
