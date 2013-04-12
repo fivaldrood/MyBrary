@@ -5,9 +5,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MybraryDatabase extends SQLiteOpenHelper {
-	private static final String TAG = "MybraryDatabaseHelper";
+	//private static final String TAG = "MybraryDatabaseHelper";
 	private static final int DB_VERSION = 1;
-	private static final String DB_NAME = "MybraryData";
+	private static final String DB_NAME = "MybraryData.db";
 	
 	public MybraryDatabase(Context context) {
 		super(context, DB_NAME, null, DB_VERSION);
@@ -16,6 +16,7 @@ public class MybraryDatabase extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		BookTable.onCreate(db);
+		seedData(db);
 	}
 	
 	@Override
@@ -25,6 +26,6 @@ public class MybraryDatabase extends SQLiteOpenHelper {
 	
 	//Seed some starting data
 	private void seedData(SQLiteDatabase db) {
-		//db.execSQL("insert into books (title, author, isbn) values ('This book', 'That Guy', '4560');");
+		db.execSQL("insert into book (title, author, isbn, genre) values ('This book', 'That Guy', '4560', 'fantasy');");
 	}
 }
