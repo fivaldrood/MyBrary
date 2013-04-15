@@ -7,5 +7,12 @@
     <string name="mm_books">Books</string>
     <string name="mm_cds">CDs</string>
     <string name="title_activity_book_list_view">BookListView</string>
+    <string name="add_book">Add Book</string>
 
+    <string-array name="test">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+    </string-array>
+    
 </resources>
