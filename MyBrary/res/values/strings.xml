@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="mm_books">Books</string>
     <string name="mm_cds">CDs</string>
+    <string name="title_activity_book_list_view">BookListView</string>
 
 </resources>
