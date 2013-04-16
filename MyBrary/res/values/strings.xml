@@ -14,5 +14,7 @@
         <item>Second</item>
         <item>Third</item>
     </string-array>
-    
+
+    <string name="title_activity_book_details">BookDetails</string>
+
 </resources>

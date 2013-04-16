@@ -33,6 +33,10 @@
             android:name="com.drooddesign.mybrary.BookListView"
             android:label="@string/title_activity_book_list_view" >
         </activity>
+        <activity
+            android:name="com.drooddesign.mybrary.BookDetails"
+            android:label="@string/title_activity_book_details" >
+        </activity>
     </application>
 
 </manifest>

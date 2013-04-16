@@ -8,12 +8,19 @@ public class BookTable {
 	private static final String CREATE_BOOK_TABLE = "create table " + MybraryProvider.BookTable.mTableName + " ("
 			+ MybraryProvider.BookTable.mId + " integer primary key autoincrement, "
 			+ MybraryProvider.BookTable.mColTitle + " text not null, "
+			+ MybraryProvider.BookTable.mColAuthor + " text not null"
+			+ ");";
+	
+	
+	/*private static final String CREATE_BOOK_TABLE = "create table " + MybraryProvider.BookTable.mTableName + " ("
+			+ MybraryProvider.BookTable.mId + " integer primary key autoincrement, "
+			+ MybraryProvider.BookTable.mColTitle + " text not null, "
 			+ MybraryProvider.BookTable.mColAuthor + " text not null, "
 			+ MybraryProvider.BookTable.mColGenre + " text not null, "
 			+ MybraryProvider.BookTable.mColLent + "integer, "
 			+ MybraryProvider.BookTable.mColLender + " text, "
 			+ MybraryProvider.BookTable.mColLendDate + "text"
-			+ ");";
+			+ ");";*/
 	
 	public static void onCreate(SQLiteDatabase db){
 		db.execSQL(CREATE_BOOK_TABLE);
