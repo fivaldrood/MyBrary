@@ -43,7 +43,7 @@ public class BookListView extends Activity {
 		String[] uiBindFrom = { MybraryProvider.BookTable.mColTitle };
 		
 		int[] uiBindTo = {R.id.title };
-		
+		//TEST TES TEST
 		Cursor tutorials = this.managedQuery( MybraryContentProvider.CONTENT_URI, projection, null, null, null);
 		CursorAdapter mCursorAdapter = new SimpleCursorAdapter(this.getApplicationContext(), R.layout.list_item, tutorials,
 				uiBindFrom, uiBindTo);
