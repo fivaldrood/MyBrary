@@ -16,8 +16,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
 		
-		//MybraryContentProvider test = new MybraryContentProvider();
-		
 		setOnClickListener(R.id.main_menu_books, mBooksHandler);
 		setOnClickListener(R.id.main_menu_cds, mCdHandler);
 		

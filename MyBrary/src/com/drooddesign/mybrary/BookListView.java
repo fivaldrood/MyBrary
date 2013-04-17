@@ -43,7 +43,7 @@ public class BookListView extends Activity {
 		String[] uiBindFrom = { MybraryProvider.BookTable.mColTitle };
 		
 		int[] uiBindTo = {R.id.title };
-		//TEST TES TEST
+		//TEST TEST TEST
 		Cursor tutorials = this.managedQuery( MybraryContentProvider.CONTENT_URI, projection, null, null, null);
 		CursorAdapter mCursorAdapter = new SimpleCursorAdapter(this.getApplicationContext(), R.layout.list_item, tutorials,
 				uiBindFrom, uiBindTo);
@@ -53,6 +53,11 @@ public class BookListView extends Activity {
 					int position, long id) {
 				
 				Intent i = new Intent(BookListView.this, BookDetails.class);
+				
+				Bundle bundle = new Bundle();
+				bundle.putString("id", String.valueOf(id));
+				
+				i.putExtras(bundle);
 				
 				startActivity(i);
 				
@@ -81,7 +86,9 @@ public class BookListView extends Activity {
 	private OnClickListener mAddBook = new OnClickListener() {
 		@Override
 		public void onClick(View v){
-			//TODO
+			Intent i = new Intent(BookListView.this, EditBook.class);
+			
+			startActivity(i);
 		}
 	};
 

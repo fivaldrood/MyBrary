@@ -37,6 +37,10 @@
             android:name="com.drooddesign.mybrary.BookDetails"
             android:label="@string/title_activity_book_details" >
         </activity>
+        <activity
+            android:name="com.drooddesign.mybrary.EditBook"
+            android:label="@string/title_activity_edit_book" >
+        </activity>
     </application>
 
 </manifest>

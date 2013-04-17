@@ -8,7 +8,12 @@
     <string name="mm_cds">CDs</string>
     <string name="title_activity_book_list_view">BookListView</string>
     <string name="add_book">Add Book</string>
-
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="save">Save</string>
+	<string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    
     <string-array name="test">
         <item>First</item>
         <item>Second</item>
@@ -16,5 +21,6 @@
     </string-array>
 
     <string name="title_activity_book_details">BookDetails</string>
+    <string name="title_activity_edit_book">EditBook</string>
 
 </resources>
