@@ -23,7 +23,7 @@ public class EditBook extends Activity {
 	private Button mSave;
 	private Button mDelete;
 	private Button mCancel;
-	private Bundle mbundle;
+	private Bundle mBundle;
 	private Boolean mIdInit;
 
 	@Override
@@ -43,8 +43,8 @@ public class EditBook extends Activity {
 		mCancel = (Button) findViewById(R.id.cancel);
 		mCancel.setOnClickListener(mCancelListener);
 		
-		mbundle = getIntent().getExtras();
-		if(mbundle != null)
+		mBundle = getIntent().getExtras();
+		if(mBundle != null)
 		{
 			mIdInit = true;
 			initWithId();
@@ -56,7 +56,7 @@ public class EditBook extends Activity {
 	}
 	
 	private void initWithId() {
-		String mBookId = mbundle.getString("id");
+		String mBookId = mBundle.getString("id");
 		Cursor mBook = BookUtil.getBookById(this, mBookId);
 		
 		if(mBook != null) {
@@ -95,7 +95,7 @@ public class EditBook extends Activity {
 				mNewValues.put(MybraryProvider.BookTable.mColAuthor, mAuthor.getText().toString());
 				
 				String mWhereClause = "( " + MybraryProvider.BookTable.mId + " = ? ) ";
-				String mBookId = mbundle.getString("id");
+				String mBookId = mBundle.getString("id");
 				
 				String[] mWhereArgs = { mBookId };
 				
@@ -112,7 +112,15 @@ public class EditBook extends Activity {
 	private OnClickListener mDeleteListener = new OnClickListener() {
 		@Override
 		public void onClick(View v){
-			//TODO DELETE
+			Integer mDeleted;
+			//ContentValues mNewValues = new ContentValues();
+			
+			String mWhereClause = "( " + MybraryProvider.BookTable.mId + " = ? ) ";
+			String mBookId = mBundle.getString("id");
+			
+			String[] mWhereArgs = {mBookId };
+			
+			mDeleted = getContentResolver().delete(MybraryContentProvider.CONTENT_URI, mWhereClause, mWhereArgs);
 			
 			Intent i = new Intent(EditBook.this, BookListView.class);
 			startActivity(i);

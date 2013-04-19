@@ -14,20 +14,18 @@
         
         <Spinner
             android:id="@+id/category"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="#00000000" 
             android:layout_alignParentLeft="true" />
-        	
-        
-        <TextView
+
+        <Button
             android:id="@+id/add_book"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/category"
-            android:text="@string/add_book" 
-            android:layout_alignRight="@id/top" />
-        
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/add_book" />
         
     </RelativeLayout>
     
